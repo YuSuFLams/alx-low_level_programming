@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,20 +10,20 @@
  *
  * Return: always 0
  */
-int	main(void)
+int main(void)
 {
-	int	i;
+	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 15 == 0)
-			printf("%s", "fizzbuzz");
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			printf("%s", "fizz");
+			printf("Fizz");
 		else if (i % 5 == 0)
-			printf("%s", "buzz");
+			printf("Buzz");
 		else
-			printf("%d", i);
+			printf("%i", i);
 		if (i < 100)
 			printf(" ");
 	}
