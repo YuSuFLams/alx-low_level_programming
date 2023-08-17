@@ -13,8 +13,7 @@ int	main(void)
 {
 	int	i;
 
-	i = 1;
-	while (i <= 100)
+	for (i = 1; i <= 100; i++)
 	{
 		if (i % 15 == 0)
 			printf("%s", "fizzbuzz");
@@ -26,7 +25,6 @@ int	main(void)
 			printf("%d", i);
 		if (i < 100)
 			printf(" ");
-		i++;
 	}
 	printf("\n");
 	return (0);
