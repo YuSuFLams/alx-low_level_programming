@@ -5,18 +5,19 @@
  *
  * Return: 0
  */
+
 int main(void)
 {
-	long int nbr = 612852475143;
-	long int i;
+	long int x = 612852475143;
+	long int j;
 
-	for (i = 2; i < nbr; i++)
+	for (j = 2; j < x; j++)
 	{
-		while (nbr % i == 0)
-			nbr /= i;
+		if (x % j == 0)
+		{
+			x = x / j;
+		}
 	}
-
-	printf("%ld\n", nbr);
-
+	printf("%ld\n", j);
 	return (0);
 }
