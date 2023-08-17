@@ -8,19 +8,19 @@
  * Return: void
  */
 
-void	print_triangle(int size)
+void print_triangle(int size)
 {
-	int i, j, k;
+	int i, j, d;
 
 	if (size <= 0)
 	{
 		_putchar('\n');
 	}
-	else 
+	else
 	{
 		for (i = 1; i <= size; i++)
 		{
-			for (k = size - i; k >= 1; k--)
+			for (d = size - i; d >= 1; d--)
 			{
 				_putchar(' ');
 			}
