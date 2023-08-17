@@ -10,12 +10,12 @@ void print_most_numbers(void)
 {
 	char	test;
 
-	test = '0';
+	test = 47;
 	while (test++ < '9')
 	{
 		if (test == '2' || test == '4')
 			continue;
-		_putchar(test);
+		putchar(test);
 	}
-	_putchar(10);
+	putchar(10);
 }
