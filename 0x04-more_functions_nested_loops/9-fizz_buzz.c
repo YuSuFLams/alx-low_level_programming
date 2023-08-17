@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,7 +9,7 @@
  *
  * Return: always 0
  */
-int main(void)
+int	main(void)
 {
 	int	i;
 
@@ -25,7 +24,7 @@ int main(void)
 			printf("%s", "buzz");
 		else
 			printf("%d", i);
-        if (i < 100)
+		if (i < 100)
 			printf(" ");
 		i++;
 	}
