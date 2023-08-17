@@ -7,7 +7,7 @@
  */
 void print_number(int n)
 {
-	long	nbr;
+	unsigned int	nbr;
 
 	nbr = n;
 	if (nbr >= 0 && nbr <= 9)
