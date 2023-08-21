@@ -22,5 +22,5 @@ int	_atoi(char *s)
 			break;
 		s++;
 	}
-	return ((int )n * sign);
+	return (n * sign);
 }
