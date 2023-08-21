@@ -12,15 +12,14 @@ int	_atoi(char *s)
 
 	n = 0;
 	sign = 1;
-	if (*s == '-' || *s == '+')
+	while (*s)
 	{
 		if (*s == '-')
 			sign *= (-1);
-		s++;
-	}
-	while (*s && *s >= '0' && *s <= '9')
-	{
-		n = n * 10 + *s - '0';
+		else if (*s >= '0' && *s <= '9')
+			n = n * 10 + *s - '0';
+		else if (n > 0)
+			break;
 		s++;
 	}
 	return ((int )n * sign);
