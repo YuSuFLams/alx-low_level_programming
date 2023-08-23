@@ -12,20 +12,20 @@ char *rot13(char *s)
 	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-    i = 0;
-    while (*(s + i))
-    {
-        j = 0;
-        while (*(a + j))
-        {
-            if (*(a + j) == *(s + i))
+	i = 0;
+	while (*(s + i))
+	{
+		j = 0;
+		while (*(a + j))
+		{
+			if (*(a + j) == *(s + i))
 			{
 				*(s + i) = *(b + j);
 				break;
 			}
-            j++;
+			j++;
 		}
-        i++;
+		i++;
 	}
 	return (s);
 }
