@@ -11,12 +11,15 @@ char *cap_string(char *s)
 	char src[] = " \t\n,;.!?\"(){}";
 
 	if (*s >= 'a' && *s <= 'z')
+	{
 		*s -= 32;
+		s++;
+	}
 	while (*s)
 	{
 		if (*s >= 'a' && *s <= 'z')
 		{
-			for (j = 0; j < 13; j++)
+			for (j = 0; j <= 12; j++)
 			{
 				if (src[j] == *s)
 					*s -= 32;
