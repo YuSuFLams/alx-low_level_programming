@@ -8,9 +8,9 @@
  *
  * Return: pointer to the memory area
  */
-char *_memset(char *s, char b, unsigned int n)
+char	*_memset(char *s, char b, unsigned int n)
 {
-	unsigned int    i;
+	unsigned int	i;
 
 	i = -1;
 	while (++i < n)
