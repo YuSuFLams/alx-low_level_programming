@@ -1,4 +1,15 @@
 #include "main.h"
+
+int	f_strchr(const char *s, char x)
+{
+	int	i;
+
+	i = -1;
+	while (*(s + (++i)))
+		if (*(s + i) == x)
+			return (1);
+	return (0);
+}
 /**
  * _strspn - function that gets the length of a prefix substring
  *@s: first value -char
@@ -8,19 +19,14 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int j = 0, i = 0;
-	unsigned int a = 0;
+    int	i;
 
-	while (s[i] != ' ' && s[i] != '\0')
+	i = 0;
+	while (*(s + i))
 	{
-		while (accept[j] != '\0')
-		{
-			if (s[i] == accept[j])
-				a++;
-			j++;
-		}
+		if (!f_strchr(accept, *(s + i)))
+			break ;
 		i++;
-		j = 0;
 	}
-	return (a);
+	return (i);
 }
