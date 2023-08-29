@@ -6,14 +6,15 @@
  * @accept: string containing the characters to match
  * Return: 1 if c is in accept, 0 otherwise
  */
-int inCharSet(char c, char *accept)
+int	_strchr(const char *s, char x)
 {
-	int i = 0;
+	int	i;
 
-	while (accept[i])
-		if (c == accept[i++])
-			return (1);
-	return (0);
+	i = -1;
+	while (*(s + (++i)))
+		if (*(s + i) == x)
+			return (0);
+	return (1);
 }
 
 /**
@@ -24,10 +25,13 @@ int inCharSet(char c, char *accept)
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0;
-
-	while (s[i])
-		if (inCharSet(s[i++], accept))
-			return (s + i - 1);
+	if (!s || !accept)
+		return (NULL);
+	while (*s)
+	{
+		if (!ft_strchr(accept, *s))
+			return ((char *)s);
+		s++;
+	}
 	return (NULL);
 }
