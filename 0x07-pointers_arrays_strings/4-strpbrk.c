@@ -6,7 +6,7 @@
  * @accept: string containing the characters to match
  * Return: 1 if c is in accept, 0 otherwise
  */
-int	_strchr(const char *s, char x)
+int	f_strchr(const char *s, char x)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ char *_strpbrk(char *s, char *accept)
 		return (NULL);
 	while (*s)
 	{
-		if (!_strchr(accept, *s))
+		if (!f_strchr(accept, *s))
 			return ((char *)s);
 		s++;
 	}
