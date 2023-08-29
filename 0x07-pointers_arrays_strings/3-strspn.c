@@ -1,6 +1,10 @@
 #include "main.h"
 
-int	f_strchr(const char *s, char x)
+/**
+ * Return: if charachter find in dtring return 1 else return 0
+ */
+
+int	f_strchr(char *s, char x)
 {
 	int	i;
 
