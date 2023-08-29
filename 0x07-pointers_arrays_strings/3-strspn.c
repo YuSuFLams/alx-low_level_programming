@@ -4,9 +4,9 @@
  * Return: if charachter find in dtring return 1 else return 0
  */
 
-int	f_strchr(char *s, char x)
+unsigned int	f_strchr(char *s, char x)
 {
-	int	i;
+	unsigned int	i;
 
 	i = -1;
 	while (*(s + (++i)))
@@ -23,7 +23,7 @@ int	f_strchr(char *s, char x)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-    int	i;
+    unsigned int	i;
 
 	i = 0;
 	while (*(s + i))
