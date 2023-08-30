@@ -8,13 +8,13 @@
  *
  * Return: number
  */
-int check_sqrt(int x, int y)
+int check_sqrt(int a, int b)
 {
-	if (x * x == y)
-		return (x);
-	if (x * x > y)
+	if (a * a == b)
+		return (a);
+	if (a * a > b)
 		return (-1);
-	return (check_sqrt(x + 1, y));
+	return (check_sqrt(a + 1, b));
 }
 
 /**

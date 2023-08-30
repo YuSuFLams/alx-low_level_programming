@@ -7,13 +7,13 @@
  * @b:int
  * Return:1 or 0
  */
-int check_prime(int n, int i)
+int check_prime(int a, int b)
 {
-	if (i == n)
+	if (b == a)
 		return (1);
-	if (n % i == 0)
+	if (a % b == 0)
 		return (0);
-	return (check_prime(n, i + 1));
+	return (check_prime(a, b + 1));
 }
 
 /**
@@ -27,6 +27,5 @@ int is_prime_number(int n)
 		return (0);
 	if (n == 2)
 		return (1);
-	else
 	return (check_prime(n, 3));
 }
