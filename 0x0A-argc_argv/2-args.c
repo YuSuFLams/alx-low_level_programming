@@ -1,16 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - prints all arguments it receives.
- * @argc: argument count
- * @argv: arguments
+ * main - prints all arguments it receives
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
  * Return: 0
  */
-
-int main(int argc, char *argv[])
+int main(__attribute__((unused)) int argc, char *argv[])
 {
-	(void)argc;
 	int i;
 
 	for (i = 0; i < argc; i++)
