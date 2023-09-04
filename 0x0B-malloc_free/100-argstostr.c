@@ -10,7 +10,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *str, *s;
-	int j, len = 0, slen;
+	int i,  j, len = 0, slen;
 
 	if (!ac || !av)
 		return (NULL);
@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	if (!s)
 		return (NULL);
     j = 0;
-	for (int i = 0; i < ac; i++) 
+	for (i = 0; i < ac; i++) 
     {
 		strcpy(s + j, av[i]);
 		j += strlen(av[i]);
