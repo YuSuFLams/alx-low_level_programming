@@ -29,9 +29,9 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		str = av[i];
-		slen = strlen(str) + 1;
+		slen = strlen(str);
 		strcpy(s + j, str);
-		j += slen - 1;
+		j += slen;
 		s[j] = '\n';
 		j++;
 	}
