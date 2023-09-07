@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * @brief 
- * 
+ * @brief count lenght of string
+ * return (lenght)
  */
 
 unsigned int *ft_strlen(char *s)
