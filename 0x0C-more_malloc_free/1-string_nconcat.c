@@ -5,7 +5,7 @@
  * return (lenght)
  */
 
-unsigned int *ft_strlen(char *s)
+unsigned int	*ft_strlen(char *s)
 {
 	unsigned int i;
 
@@ -16,6 +16,7 @@ unsigned int *ft_strlen(char *s)
 		i++;
 	return (i);
 }
+
 /**
  * string_nconcat - a function that concatenates two strings.
  *
