@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * @brief count lenght of string
- * return (lenght)
- */
-
-unsigned int	*ft_strlen(char *s)
-{
-	unsigned int i;
-
-	if (!s)
-		return (0);
-	i = 0;
-	while (*(s + i))
-		i++;
-	return (i);
-}
-
-/**
  * string_nconcat - a function that concatenates two strings.
  *
  * @s1: first char
@@ -32,8 +15,8 @@ char	*string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int	len1, len2, i;
 	char			*s;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 	if (n > len2)
 	{
 		n = len2;
