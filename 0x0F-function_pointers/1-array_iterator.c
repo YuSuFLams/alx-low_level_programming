@@ -5,9 +5,9 @@
  * @size: is the size
  * @action: is a pointer to the function you need to use
 */
-void    array_iterator(int *array, size_t size, void (*action)(int))
+void	array_iterator(int *array, size_t size, void (*action)(int))
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (!array || !action)
 	{
