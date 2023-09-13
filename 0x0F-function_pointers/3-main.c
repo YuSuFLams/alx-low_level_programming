@@ -11,8 +11,8 @@
   */
 int main(int argc, char *argv[])
 {
-	int (*oprt)(int, int);
-	int n1, n2;
+	int	(*oprt)(int, int);
+	int	n1, n2;
 
 	if (argc != 4)
 	{
@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-    n1 = atoi(argv[1]);
-    n2 = atoi(argv[3]);
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
 	oprt = get_op_func(argv[2]);
 
 	if (!oprt)
