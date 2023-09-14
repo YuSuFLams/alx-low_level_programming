@@ -4,7 +4,7 @@
  * write_char - prints a character
  * @args: va_list containing the character to print
  */
-void write_char(va_list args)
+void	write_char(va_list args)
 {
 	printf("%c", va_arg(args, int));
 }
@@ -13,7 +13,7 @@ void write_char(va_list args)
  * write_int - prints an integer
  * @args: va_list containing the integer to print
  */
-void write_int(va_list args)
+void	write_int(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
@@ -22,7 +22,7 @@ void write_int(va_list args)
  * write_float - prints a float
  * @args: va_list containing the float to print
  */
-void write_float(va_list args)
+void	write_float(va_list args)
 {
 	printf("%f", va_arg(args, double));
 }
@@ -31,10 +31,9 @@ void write_float(va_list args)
  * write_string - prints a string
  * @args: va_list containing the string to print
  */
-void write_string(va_list args)
+void	write_string(va_list args)
 {
 	char *s = va_arg(args, char*);
-
 	printf("%s", s == NULL ? "(nil)" : s);
 }
 
@@ -42,11 +41,11 @@ void write_string(va_list args)
  * write_all - prints anything
  * @format: list of types of arguments passed to the function
  */
-void print_all(const char * const format, ...)
+void	print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0, j;
-	char *sep = "";
+	va_list	args;
+	int i, j;
+	char *str;
 
 	write_t print[] = {
 		{"c", write_char},
@@ -57,6 +56,8 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
+	i = 0;
+	str = "";
 	while (format && format[i])
 	{
 		j = 0;
@@ -64,9 +65,9 @@ void print_all(const char * const format, ...)
 			++j;
 		if (j < 4)
 		{
-			printf("%s", sep);
+			printf("%s", str);
 			print[j].f(args);
-			sep = ", ";
+			str = ", ";
 		}
 		++i;
 	}
