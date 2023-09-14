@@ -4,17 +4,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-/**
- * struct print - struct for printing different types
- * @param: format specifier
- * @f: function to print
- */
-typedef struct write
-{
-	char *param;
-	void (*f)(va_list);
-} write_t;
-
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
