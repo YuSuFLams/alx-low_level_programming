@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-void __attribute__((constructor)) hare(void);
 /**
  * premain - prints a string before the main function is executed
  */
