@@ -1,9 +1,10 @@
 #include <stdio.h>
 
+void __attribute__((constructor)) premain(void);
 /**
  * premain - prints a string before the main function is executed
  */
-__attribute__ ((constructor))
+
 void    premain(void)
 {
     printf("You're beat! and yet, you must allow,\n");
