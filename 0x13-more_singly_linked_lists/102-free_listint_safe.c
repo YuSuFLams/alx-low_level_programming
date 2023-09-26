@@ -6,11 +6,12 @@
  *
  * Return: number of elements in the freed list
  */
+
 size_t free_listint_safe(listint_t **h)
 {
-	size_t len = 0;
-	int         pos;
-	listint_t *lst;
+	size_t		len = 0;
+	int			pos;
+	listint_t	*lst;
 
 	if (!h || !(*h))
 		return (0);
