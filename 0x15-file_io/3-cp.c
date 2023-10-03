@@ -1,14 +1,12 @@
 #include "main.h"
 
-#define BUFFER_SIZE 1024
-
 /**
- * main - entry point
- * description: copies the content of a file to another file
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0 on success, 97-100 on failure
+ * main - copies the content of a file to another file.
+ * @argc: argument counter.
+ * @argv: argument vector.
+ * Return: always return 0, or exit.
  */
+
 int	main(int argc, char *argv[])
 {
 	int		fd_in;
