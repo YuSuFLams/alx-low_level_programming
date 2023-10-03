@@ -14,7 +14,10 @@ int main(int argc, char *argv[])
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	/* open file_from */
 	fd_in = open(argv[1], O_RDONLY);
 	if (fd_in == -1)
