@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int fd_in, fd_out, count, s;
-	char buf[1024];
+	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -31,9 +31,9 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	/* read from file_from and write to file_to */
-	while ((count = read(fd_in, buf, 1024)) > 0)
+	while ((count = read(fd_in, buffer, BUFFER_SIZE)) > 0)
 	{
-		s = write(fd_out, buf, count);
+		s = write(fd_out, buffer, count);
 		if (s == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
