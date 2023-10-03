@@ -7,9 +7,10 @@
  * Return: always return 0, or exit.
  */
 
+
 int main(int argc, char *argv[])
 {
-	int fd_in, fd_out, count, s;
+	int fd_in, fd_out, count = 1, s;
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
@@ -29,8 +30,9 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	/* read from file_from and write to file_to */
-	while ((count = read(fd_in, buffer, BUFFER_SIZE)) > 0)
+	while (count)
 	{
+		count = read(fd_in, buffer, BUFFER_SIZE);
 		s = write(fd_out, buffer, count);
 		if (s == -1)
 		{
