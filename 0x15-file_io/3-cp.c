@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-
 	/* open file_from */
 	fd_in = open(argv[1], O_RDONLY);
 	if (fd_in == -1)
@@ -22,7 +21,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	/* open file_to */
 	fd_out = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_out == -1)
@@ -40,13 +38,11 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-
 	if (count == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	if (close(fd_in) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_in);
