@@ -7,11 +7,11 @@
  * Return: number of letters it could read and print
  */
 
-ssize_t read_textfile(const char *filename, size_t letters)
+ssize_t	read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	char *buffer;
-	ssize_t count, s;
+	int		fd;
+	char	*buffer;
+	ssize_t	count, s;
 
 	buffer = malloc(sizeof(char) * letters);
 	if (!buffer || !filename )
